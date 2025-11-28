@@ -482,77 +482,155 @@ body {
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 768px) {
-    .nav-links {
-        gap: 1rem;
+@media (max-width: 900px) {
+    /* Umum */
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
     }
 
+    /* Navigasi */
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        gap: 0.8rem;
+    }
+
+    .logo-image {
+        max-height: 40px; /* Atur ukuran logo agar tidak terlalu besar di HP */
+    }
+
+    /* Hero Section */
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    /* About Section: Ubah tata letak 2 kolom menjadi 1 kolom */
+    .about-content {
+        grid-template-columns: 1fr; /* Satu kolom */
+    }
+
+    /* Ubah urutan elemen agar teks di atas gambar di HP */
+    .about-image {
+        order: -1; 
+        margin-bottom: 30px;
+    }
+
+    .image-placeholder {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigasi */
+    .nav-links {
+        flex-wrap: wrap; /* Biarkan link navigasi turun baris jika terlalu banyak */
+        justify-content: center;
+    }
+    
     .nav-link {
         font-size: 0.9rem;
         padding: 0.4rem 0.8rem;
     }
-
+    
+    /* Hero Section */
     .hero-title {
         font-size: 2.5rem;
     }
-
+    
     .hero-subtitle {
         font-size: 1.2rem;
     }
 
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-
+    /* Products Section: Sesuaikan ukuran kartu */
     .product-card {
         flex: 0 0 250px;
     }
 
+    /* Modal */
     .modal-content {
         padding: 1.5rem;
     }
-
+    
     .modal-buttons {
         flex-direction: column;
     }
-
+    
     .modal-btn {
         width: 100%;
+        margin-top: 0.5rem; /* Tambahkan sedikit jarak */
     }
 }
 
 @media (max-width: 480px) {
+    /* Umum */
+    body {
+        font-size: 90%;
+    }
+    
+    /* Navigasi */
     .logo {
         font-size: 1.4rem;
     }
-
+    
     .nav-links {
         gap: 0.5rem;
     }
-
+    
     .nav-link {
         font-size: 0.8rem;
         padding: 0.3rem 0.6rem;
     }
-
+    
+    /* Hero Section */
     .hero-title {
         font-size: 2rem;
     }
-
+    
     .hero-subtitle {
         font-size: 1rem;
     }
-
+    
     .cta-button {
         padding: 0.8rem 2rem;
         font-size: 1rem;
     }
-
+    
+    /* Products Section */
     .product-card {
-        flex: 0 0 200px;
+        flex: 0 0 200px; /* Ukuran kartu yang lebih kecil */
+        /* Pastikan gambar produk menyesuaikan juga */
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+
+    .product-info {
+        padding: 1rem;
+    }
+
+}
+/* Dalam file style.css */
+.logo-image {
+    max-height: 50px; /* Ukuran default */
+    width: auto;
+}
+
+@media (max-width: 900px) {
+    .logo-image {
+        max-height: 40px; /* Ukuran di HP */
     }
 }
