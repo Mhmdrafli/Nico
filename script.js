@@ -21,7 +21,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+// NEW: Fungsi untuk smooth scroll ke section tertentu
+function scrollToSection(selector) {
+    const target = document.querySelector(selector);
+    if (target) {
+        // Offset (80px) sama seperti di fungsi smooth scrolling Anda
+        const offsetTop = target.offsetTop - 80; 
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
+// NEW: Fungsi untuk smooth scroll ke section tertentu (Diperlukan untuk tombol YA)
+function scrollToSection(selector) {
+    const target = document.querySelector(selector);
+    if (target) {
+        // Offset (80px) sama seperti di fungsi smooth scrolling Anda
+        const offsetTop = target.offsetTop - 80; 
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
 
+// ========== HOME CTA LOGIC ==========
+const homeYesBtn = document.getElementById('homeYesBtn');
+const homeNoBtn = document.getElementById('homeNoBtn');
+
+if (homeYesBtn) {
+    homeYesBtn.addEventListener('click', function() {
+        alert('Selamat! Diskon 10% untuk pembelian pertama Anda sudah aktif. Kami akan mengarahkan Anda ke koleksi produk kami.');
+        scrollToSection('#products'); // Scroll ke bagian Products
+    });
+}
+
+if (homeNoBtn) {
+    homeNoBtn.addEventListener('click', function() {
+        alert('Baik, terima kasih atas kunjungannya. Kami harap Anda kembali lagi!');
+    });
+}
 // ========== ACTIVE NAVIGATION HIGHLIGHTING ==========
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -117,7 +157,7 @@ function closeModal() {
 
 // Close modal events
 closeBtn.addEventListener('click', closeModal);
-noBtn.addEventListener('click', closeModal);
+// noBtn.addEventListener('click', closeModal); // Hapus baris ini karena kita akan menggantinya
 
 // Close modal when clicking outside
 modal.addEventListener('click', function(e) {
@@ -133,10 +173,18 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Yes button action (can be customized)
+// ========== MODIFIED MODAL BUTTON ACTIONS ==========
+
+// Yes button action: Tutup modal dan scroll ke bagian produk
 yesBtn.addEventListener('click', function() {
-    const productName = document.getElementById('modalName').textContent;
-    alert(`Great choice! "${productName}" has been added to your wishlist.`);
+    alert(`Selamat! Diskon 10% Anda sudah aktif. Silakan lihat produk kami!`);
+    closeModal();
+    scrollToSection('#products'); // Scroll ke bagian Products
+});
+
+// No button action: Hanya menutup modal dan memberikan ucapan terima kasih
+noBtn.addEventListener('click', function() {
+    alert('Baik, terima kasih atas kunjungannya. Kami harap Anda kembali lagi!');
     closeModal();
 });
 

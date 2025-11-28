@@ -23,13 +23,18 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">NICO Boulangerie</h1>
-            <p class="hero-subtitle">Cita Rasa Otentik Eropa & Mitra Grosir Roti Terpercaya di Seluruh Bali</p>
-            <a href="#products" class="cta-button">View Products</a>
+   <section id="home" class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">NICO Boulangerie</h1>
+        <p class="hero-subtitle">Cita Rasa Otentik Eropa & Mitra Grosir Roti Terpercaya di Seluruh Bali</p>
+        
+        <p class="interest-question">Tertarik dengan produk kami? Dapatkan Diskon 10% untuk pembelian pertama!</p>
+        <div class="home-cta-buttons">
+            <button class="cta-button home-yes-btn" id="homeYesBtn">YA, Tampilkan Produk & Diskon</button>
+            <button class="cta-button home-no-btn" id="homeNoBtn">Tidak, Terima Kasih</button>
         </div>
-    </section>
+        </div>
+</section>
 
     <!-- Products Section -->
     <section id="products" class="products-section">
@@ -125,7 +130,6 @@
         </div>
     </section>
 
-    <!-- Modal -->
     <div id="productModal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -133,14 +137,19 @@
                 <img id="modalImage" src="" alt="Product">
                 <h3 id="modalName"></h3>
                 <p class="modal-price" id="modalPrice"></p>
+                
+                <div class="discount-offer">
+                    <p style="margin-bottom: 10px; color: #ffffff; font-weight: 500;">Tertarik untuk melihat produk lebih detail?</p>
+                    <p style="margin-bottom: 20px; font-size: 1.1rem; color: #ffffff;">Mau diskon 10% untuk pembelian pertama Anda?</p>
+                </div>
+                
                 <div class="modal-buttons">
-                    <button class="modal-btn yes-btn">YES</button>
-                    <button class="modal-btn no-btn">NO</button>
+                    <button class="modal-btn yes-btn">Ya, Mau (Lihat Produk)</button>
+                    <button class="modal-btn no-btn">Tidak, Terima Kasih</button>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
