@@ -1,9 +1,9 @@
 // ========== PRODUCT DATA ==========
 const products = {
-    1: { name: 'Stropwafel Gluten Free Caramel', price: '$299.99', image: 'https://via.placeholder.com/300x300/7b0000/ffffff?text=Product+1' },
-    2: { name: 'Stropwafel Hazelnut', price: '$399.99', image: 'https://via.placeholder.com/300x300/800000/ffffff?text=Product+2' },
-    3: { name: 'Stropwafel Original Caramel', price: '$349.99', image: 'https://via.placeholder.com/300x300/7b0000/ffffff?text=Product+3' },
-    4: { name: 'Sablé Cookies', price: '$449.99', image: 'https://via.placeholder.com/300x300/800000/ffffff?text=Product+4' },
+    1: { name: 'Stropwafel Gluten Free Caramel', price: '$299.99', image: 'foto/1.jpg' },
+    2: { name: 'Stropwafel Hazelnut', price: '$399.99', image: 'foto/2.jpg' },
+    3: { name: 'Stropwafel Original Caramel', price: '$349.99', image: 'foto/4.jpg' },
+    4: { name: 'Sablé Cookies', price: '$449.99', image: 'foto/5.webp' },
     5: { name: 'Premium Edition', price: '$599.99', image: 'https://via.placeholder.com/300x300/7b0000/ffffff?text=Product+5' }
 };
 
